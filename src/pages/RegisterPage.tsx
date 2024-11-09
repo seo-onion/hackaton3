@@ -29,17 +29,22 @@ export default function RegisterPage() {
 
 	return (
 		<main>
-			<section>
-				<Button message="Iniciar Sesión" to="/auth/login" />
-				<Button message="Registrarse" to="/auth/register" />
+			<section className="flex justify-center items-center space-x-4 py-4">
+			<Button
+				message="Iniciar Sesión"
+				to="/auth/login"
+			/>
+			<Button
+				message="Registrarse"
+				to="/auth/register"
+			/>
 			</section>
 
 			<article>
-				<section>
-					<h1>¡Bienvenido!</h1>
-					<p>Regístrate para empezar con Uber</p>
-				</section>
-
+			<section className="flex flex-col items-center text-center py-10 bg-gray-50 rounded-lg shadow-lg">
+			<h1 className="text-4xl font-extrabold text-gray-800 mb-4">¡Bienvenido!</h1>
+			<p className="text-lg text-gray-600">Regístrate para empezar con <span className="font-bold text-blue-600">QImporta</span></p>
+			</section>
 				<RegisterForm onSubmit={handleRegister} />
 			</article>
 
