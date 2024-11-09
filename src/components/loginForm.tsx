@@ -26,7 +26,7 @@ export default function LoginForm() {
             await login(formData);
             setSuccessMessage("Login successful!");
             console.log("Login successful");
-	        navigate("/dashboard");
+	        navigate("/main");
         } catch (error) {
             setError("Login failed. Please try again.");
             console.error("Error during login:", error);

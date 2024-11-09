@@ -5,5 +5,4 @@ export interface ItemRequest{
     price:number
     stars:number
     title:string
-
 }

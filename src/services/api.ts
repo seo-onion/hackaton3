@@ -68,13 +68,13 @@ export default class Api {
 		return this.request<RequestBodyType, ResponseBodyType>(configOptions);
 	}
 
-	public delete(options: AxiosRequestConfig) {
+	public delete<ResponseType>(options: AxiosRequestConfig): Promise<AxiosResponse<ResponseType>> {
 		const configOptions: AxiosRequestConfig = {
 			...options,
 			method: "DELETE",
 		};
-
-		return this.request<void, void>(configOptions);
+	
+		return this.request<void, ResponseType>(configOptions); // Asegúrate de retornar el resultado de this.request
 	}
 
 	public put<RequestBodyType, ResponseBodyType>(

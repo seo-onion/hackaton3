@@ -15,7 +15,7 @@ export default function RegisterPage() {
 		try {
 			console.log("Payload enviado:", formData); // Verificar el payload que se envía
 			await register(formData);
-			navigate("/dashboard");
+			navigate("/main");
 		} catch (error) {
 			if (axios.isAxiosError(error) && error.response) {
 				console.log("Error en el registro:", error.response.data); // Esto debería dar detalles del error
