@@ -6,10 +6,10 @@ export async function getListItem(limit: number, lastKey?: string): Promise<Pagi
     try {
         const api = await Api.getInstance();
         const response = await api.get<void, PaginatedItemsResponse>({
-            url: "/items", // Solo especifica la ruta base
+            url: "/items",
             params: {
-                limit, // Axios añadirá esto como ?limit=10 en la URL automáticamente
-                ...(lastKey && { lastKey }) // Añade lastKey solo si está definido
+                limit, 
+                ...(lastKey && { lastKey }) // Incluye lastKey solo si está definido
             }
         });
         return response.data;
