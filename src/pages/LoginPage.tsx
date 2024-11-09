@@ -3,7 +3,7 @@ import LoginForm from "../components/loginForm";
 
 export default function LoginPage() {
 	return (
-		<main className="flex flex-col items-center min-h-screen bg-gray-50 py-10 px-6">
+		<main className="flex flex-col items-center min-h-screen bg-gray-50 py-50 px-6">
 			{/* Sección de botones de inicio de sesión y registro */}
 			<section className="flex gap-4 mb-8">
 				<Button
